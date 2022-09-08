@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_ll"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="231dp"
+            android:layout_height="237dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/login" />
+
+        <TextView
+            android:id="@+id/txttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_centerHorizontal="true"
+            android:text="您好，请登录"
+            android:textSize="20sp"/>
+        <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+        <TextView
+            android:id="@+id/txtname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txttitle"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:text="Username："
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edtname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtname"
+            android:layout_toRightOf="@+id/txtname"
+            android:ems="10"
+            android:inputType="textPersonName">
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/txtpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtname"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:text="Password:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edtpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtpass"
+            android:layout_toRightOf="@+id/txtpass"
+            android:ems="10"
+            android:inputType="textPassword">
+            <requestFocus />
+        </EditText>
+
+        <CheckBox
+            android:id="@+id/chkpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtpass"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text="Save Password" />
+
+        <Button
+            android:id="@+id/btnok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chkpass"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:text="Submit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_rel"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/horizontal_pbar"
+            android:layout_marginBottom="-20dp"
+            android:text="请稍后..."
+            android:textSize="24dp" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:max="100"
+            android:id="@+id/horizontal_pbar"
+            android:layout_marginTop="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/load_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@+id/horizontal_pbar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/html"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/texthello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:text="欢迎来到个人用户界面！"
+            android:textColor="@color/colorAccent"
+            android:textSize="32dp" />
+
+        <ImageView
+            android:id="@+id/im1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/texthello"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/im1" />
+
+
+        <ImageView
+            android:id="@+id/im2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/im1"
+            android:src="@drawable/im2" />
+
+        <ImageView
+            android:id="@+id/im3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/im2"
+            android:src="@drawable/im3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+
+            android:layout_marginTop="130dp"
+            android:layout_toRightOf="@+id/im1"
+            android:text="张三(点击图片有惊喜！)"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="60dp"
+            android:layout_toRightOf="@+id/im2"
+            android:text="李四"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:layout_marginLeft="60dp"
+            android:layout_toRightOf="@+id/im3"
+            android:text="王五"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginBottom="50dp"
+            android:width="100dp"
+            android:height="68dp"
+            android:text="退出登录">
+
+        </Button>
+    </RelativeLayout>
+</RelativeLayout>
+
+
